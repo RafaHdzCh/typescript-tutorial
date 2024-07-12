@@ -1,14 +1,4 @@
-"use strict";
-class Invoice {
-    constructor(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    Format() {
-        return `${this.client} owes $${this.amount} for ${this.details}`;
-    }
-}
+import { Invoice } from "./classes/Invoice.js";
 const invOne = new Invoice("Rafa", "Cellphone", 300);
 const invTwo = new Invoice("LUigi", "Work", 200);
 let invoices = [];
