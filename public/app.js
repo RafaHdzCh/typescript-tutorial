@@ -6,7 +6,7 @@ class Invoice {
         this.amount = amount;
     }
     Format() {
-        return `${this.client} owes $${this.amount} for ${details}`;
+        return `${this.client} owes $${this.amount} for ${this.details}`;
     }
 }
 const invOne = new Invoice("Rafa", "Cellphone", 300);
@@ -14,6 +14,9 @@ const invTwo = new Invoice("LUigi", "Work", 200);
 let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
+invoices.forEach(invoice => {
+    console.log(invoice.Format());
+});
 const anchor = document.querySelector("a");
 const form = document.querySelector(".new-item-form");
 const type = document.querySelector("#type");
