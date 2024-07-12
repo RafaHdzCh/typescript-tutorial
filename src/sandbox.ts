@@ -8,3 +8,17 @@ let ninja =
     belt: "Black",
     age: 30
 }
+
+let user: 
+{
+    rank: number,
+    level: number
+    xp: number,
+}
+
+user = 
+{
+    rank:15,
+    level:30,
+    xp:30
+}
