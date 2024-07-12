@@ -1,4 +1,5 @@
 "use strict";
+//#region Variables
 let names = ["Luigi", "Mario", "Yoshi"];
 names.push("Toad");
 let ninja = {
@@ -13,6 +14,8 @@ user =
         level: 30,
         xp: 30
     };
+//#endregion
+//#region Functions
 let Greet;
 Greet = () => {
     console.log("Hello!");
@@ -34,3 +37,26 @@ const GreetAgain = (user) => {
     console.log(`${user.name} says hello!`);
 };
 GreetAgain({ name: "string", uid: "StringOrNum" });
+//#endregion
+//#region Function signatures
+//Example #1
+let func;
+func = (name, greeting) => {
+    console.log(`${name} says ${greeting}`);
+};
+//Example #2
+let calc;
+calc = (numOne, numTwo, action) => {
+    if (action === "add") {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
+};
+//Example #3
+let Log;
+Log = (ninja) => {
+    console.log(`${ninja.name} is ${ninja.age} years old`);
+};
+//#endregion

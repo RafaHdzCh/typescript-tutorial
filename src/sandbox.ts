@@ -1,3 +1,5 @@
+//#region Variables
+
 let names: String[] = ["Luigi","Mario","Yoshi"];
 
 names.push("Toad");
@@ -23,6 +25,9 @@ user =
     xp:30
 }
 
+//#endregion
+
+//#region Functions
 
 let Greet: Function;
 Greet = () =>
@@ -45,6 +50,9 @@ const Minus = (a:number, b:number): number =>
 
 let result = Minus(10,7)
 
+//#endregion
+
+//#region Aliases
 
 type StringOrNum = string | number;
 
@@ -63,3 +71,39 @@ const GreetAgain = (user: ObjectWithName) =>
 
 GreetAgain({name: "string", uid: "StringOrNum"}
 )
+
+//#endregion
+
+//#region Function signatures
+
+    //Example #1
+    let func: (A: String, B: String) => void;
+    func = (name: String, greeting: String) =>
+    {
+        console.log(`${name} says ${greeting}`);
+    }
+
+    //Example #2
+    let calc: (a: number, b: number, c: string) => number;
+    calc = (numOne: number, numTwo: number, action:  string) =>
+    {
+        if(action === "add")
+        {
+            return numOne+numTwo;
+        }
+        else
+        {
+            return numOne-numTwo;
+        }
+    }
+
+    //Example #3
+    let Log: (obj: {name: string, age: number}) => void;
+    type person = {name: string, age: number};
+    
+    Log = (ninja: person) =>
+    {
+        console.log(`${ninja.name} is ${ninja.age} years old`)
+    }
+
+//#endregion
