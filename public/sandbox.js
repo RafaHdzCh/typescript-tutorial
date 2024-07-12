@@ -26,3 +26,7 @@ const Minus = (a, b) => {
     return a - b;
 };
 let result = Minus(10, 7);
+const LogDetails = (uid, item) => {
+    console.log(`${item} says hello!`);
+};
+LogDetails(1, "Soap");

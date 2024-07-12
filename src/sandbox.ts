@@ -44,3 +44,12 @@ const Minus = (a:number, b:number): number =>
 }
 
 let result = Minus(10,7)
+
+
+type StringOrNum = string | number;
+
+const LogDetails = (uid: StringOrNum, item: string) =>
+{
+    console.log(`${item} says hello!`)
+}
+LogDetails(1,"Soap");
