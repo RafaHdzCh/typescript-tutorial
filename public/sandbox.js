@@ -1,5 +1,5 @@
-"use strict";
 //#region Variables
+import { Invoice } from "./classes/Invoice";
 let names = ["Luigi", "Mario", "Yoshi"];
 names.push("Toad");
 let ninja = {
@@ -37,8 +37,26 @@ const GreetAgain = (user) => {
     console.log(`${user.name} says hello!`);
 };
 GreetAgain({ name: "string", uid: "StringOrNum" });
-//#endregion
-//#region Function signatures
+const me = {
+    name: "Rafa",
+    age: 25,
+    Speak(text) {
+        console.log(text);
+    },
+    Spend(amount) {
+        console.log(amount);
+        return amount;
+    },
+};
+const GreetPerson = (user) => {
+    console.log("Hello,", user.name);
+};
+GreetPerson(me);
+const invOne = new Invoice("Rafa", "Cellphone", 300);
+const invTwo = new Invoice("LUigi", "Work", 200);
+let invoices = [];
+invoices.push(invOne);
+invoices.push(invTwo);
 //Example #1
 let func;
 func = (name, greeting) => {

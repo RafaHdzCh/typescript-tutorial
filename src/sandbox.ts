@@ -1,5 +1,7 @@
 //#region Variables
 
+import { Invoice } from "./classes/Invoice";
+
 let names: String[] = ["Luigi","Mario","Yoshi"];
 
 names.push("Toad");
@@ -75,6 +77,56 @@ GreetAgain({name: "string", uid: "StringOrNum"}
 //#endregion
 
 //#region Function signatures
+
+
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
+
+// docOne = new Invoice("Yoshi", "web work", 250);
+// docTwo = new Payment("Mario", "plumbing work", 300);
+
+// let docs: HasFormatter[] = [];
+// docs.push(docOne);
+// docs.push(docTwo);
+
+// console.log(docs)
+
+interface IsPerson 
+{
+  name: string;
+  age: number;
+  Speak(text: string): void;
+  Spend(amount: number): void;
+}
+
+const me: IsPerson = 
+{
+  name: "Rafa",
+  age: 25,
+  Speak(text: string): void
+  {
+    console.log(text);
+  },
+  Spend(amount: number): number
+  {
+    console.log(amount);
+    return amount;
+  },
+}
+
+const GreetPerson = (user: IsPerson) =>
+{
+  console.log("Hello,",user.name);
+}
+
+GreetPerson(me);
+
+const invOne = new Invoice("Rafa", "Cellphone", 300);
+const invTwo = new Invoice("LUigi", "Work", 200);
+
+let invoices: Invoice[] = [];
+invoices.push(invOne);
+invoices.push(invTwo);
 
     //Example #1
     let func: (A: String, B: String) => void;
