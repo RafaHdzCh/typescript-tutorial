@@ -78,7 +78,6 @@ GreetAgain({name: "string", uid: "StringOrNum"}
 
 //#region Function signatures
 
-
 // let docOne: HasFormatter;
 // let docTwo: HasFormatter;
 
@@ -157,5 +156,43 @@ invoices.push(invTwo);
     {
         console.log(`${ninja.name} is ${ninja.age} years old`)
     }
+
+//#endregion
+
+//#region Generics
+
+// T === type
+const AddID = <T extends {name: string}>(object: T) =>
+{
+    const id = Math.floor(Math.random() * 100);
+    return {...object, id};
+}
+
+const docOne = AddID(
+{
+    name: "Yoshi",
+    age: 40    
+});
+
+interface Resource<T> 
+{
+    id: number;
+    resourceName: string;
+    data: T;
+}
+
+const docThree: Resource<string> = 
+{
+    id: 1,
+    resourceName: "Person",
+    data: "Datos",
+}
+//#endregion
+
+//#region Tuples
+
+let arr = ["ryu", 25, true];
+
+let tup: [string, number, boolean] = ["tyu", 44, true]
 
 //#endregion

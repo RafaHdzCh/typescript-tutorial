@@ -78,3 +78,23 @@ Log = (ninja) => {
     console.log(`${ninja.name} is ${ninja.age} years old`);
 };
 //#endregion
+//#region Generics
+// T === type
+const AddID = (object) => {
+    const id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, object), { id });
+};
+const docOne = AddID({
+    name: "Yoshi",
+    age: 40
+});
+const docThree = {
+    id: 1,
+    resourceName: "Person",
+    data: "Datos",
+};
+//#endregion
+//#region Tuples
+let arr = ["ryu", 25, true];
+let tup = ["tyu", 44, true];
+//#endregion

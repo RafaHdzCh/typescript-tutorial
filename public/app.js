@@ -11,11 +11,12 @@ const list = new ListTemplate(ul);
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     let doc;
+    const values = [toFrom.value, details.value, amount.valueAsNumber];
     if (type.value === "invoice") {
-        doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...values);
     }
     else {
-        doc = new Payment(toFrom.value, details.value, amount.valueAsNumber);
+        doc = new Payment(...values);
     }
     list.Render(doc, type.value, "end");
 });
