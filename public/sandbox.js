@@ -30,3 +30,7 @@ const LogDetails = (uid, item) => {
     console.log(`${item} says hello!`);
 };
 LogDetails(1, "Soap");
+const GreetAgain = (user) => {
+    console.log(`${user.name} says hello!`);
+};
+GreetAgain({ name: "string", uid: "StringOrNum" });

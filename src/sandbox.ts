@@ -53,3 +53,13 @@ const LogDetails = (uid: StringOrNum, item: string) =>
     console.log(`${item} says hello!`)
 }
 LogDetails(1,"Soap");
+
+type ObjectWithName = {name: string, uid: StringOrNum}
+
+const GreetAgain = (user: ObjectWithName) => 
+{
+    console.log(`${user.name} says hello!`);
+}
+
+GreetAgain({name: "string", uid: "StringOrNum"}
+)
